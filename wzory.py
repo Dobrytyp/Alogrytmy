@@ -45,3 +45,17 @@
 #         return wynik
 
 # print(silnia(6))
+
+#--------------------------------------------------------------------
+
+# # silnia rekurencyjnie
+
+# def silnia_rek(n):
+#     if n == 0:
+#         return 1
+#     elif n == 1:
+#         return 1
+#     else:
+#         return n * silnia_rek(n-1)
+
+# print(silnia_rek(5))
