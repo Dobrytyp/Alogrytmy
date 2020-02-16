@@ -275,7 +275,7 @@ class Stos:
 # print(kol.dequeue())
 
 
-# Zrób kolejkęz dwóch sotsów
+# Zrób kolejkę z dwóch stosów
 
 
 class Kolejka:
@@ -309,6 +309,6 @@ kol.enqueue(4)
 
 
 print(kol.dequeue())
-print(kol.dequeue())
-print(kol.dequeue())
-print(kol.dequeue())
+# print(kol.dequeue())
+# print(kol.dequeue())
+# print(kol.dequeue())
