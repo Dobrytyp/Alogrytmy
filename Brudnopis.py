@@ -115,3 +115,26 @@
 # now = datetime.now()
 #
 # print("sorted", now - oldnow)
+
+
+# Given a list of numbers. Determine the element in the list with the largest value. Print the value of the largest element and then the index number.
+# If the highest element is not unique, print the index of the first instance.
+
+# Napisz funkcję, która sprawdzi, czy podana liczba jest doskonała (tj. jest
+# sumą swoich dzielników właściwych, np. 6 = 1 + 2 + 3).
+
+def doskonala(n):
+    dzielniki = []
+    for i in range(1, n):
+        if n % i == 0:
+            dzielniki.append(i)
+    if sum(dzielniki) == n:
+        return "jest doskonała"
+    else:
+        return "Nie jest"
+
+
+if __name__ == '__main__':
+    print(doskonala(4))
+    print(doskonala(6))
+

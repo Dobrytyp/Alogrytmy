@@ -57,14 +57,14 @@
 #     print(stack.pop())
 
 
-# ZadanieZaimplementuj kalkulator do rozwiązywania wyrażeń zapisanych w odwrotnej notacji polskiej.
+# Zadanie Zaimplementuj kalkulator do rozwiązywania wyrażeń zapisanych w odwrotnej notacji polskiej.
 # np. dla wyrażenia„3 5 2 * +” powinien zwrócić wynik 13„15 7 1 1 + − ÷ 3 × 2 1 1 + + −”
 # powinien zwrócić 5„6 2 3 + - 3 8 2 / + * 2 5 3 + + +” powinien zwrócić 17
 
 #                                            ZRÓB TO !  ZROBILEM!
 
 
-# class Stos:
+# class Stos:                 # Tu masz obiektówkę stosu, zapisz sobie pewnie ci się przyda
 #     def __init__(self):
 #         self.stack = []
 #
@@ -82,9 +82,10 @@
 #
 #     def __str__(self):
 #         return str(self.stack)
+#
 # stos1 = Stos()
 #
-# def expression(symbol, a ,b):
+# def expression(symbol, a ,b):           # Tu masz lamdę z działań arytmetycznych
 #     symbols = {
 #         "+": lambda a, b: a + b,
 #         "-": lambda a, b: a - b,
@@ -94,11 +95,8 @@
 #     func = symbols[symbol]
 #     return func(a, b)
 #
-# import re
-#
-# def onp(wzor):
+# def onp(wzor):                  # a tu sam zrobiłenm
 #     wzor = wzor.split(" ")
-#     print(wzor)
 #     for i in wzor:
 #         if i =="+":
 #             a = int(stos1.pop())
@@ -295,31 +293,64 @@
 # pary: [(2, 5), (4, 3)].
 
 # list1 = [2, 4, 5, 5, 7, 9]
-#
-#
-def get_pairs(lst, given_num):
-    pairs = []
 
-    for i in range(len(lst)):
-        for j in range(i+1, len(lst)):
-            if lst[i] + lst[j] == given_num:
-                pairs.append((lst[i], lst[j]))
-    return pairs
 
-print(get_pairs([2, 4, 5, 5 ,7, 9], 7))
+# def get_pairs(lst, given_num):
+#     pairs = []
+#
+#     for i in range(len(lst)):
+#         for j in range(i+1, len(lst)):
+#             if lst[i] + lst[j] == given_num:
+#                 pairs.append((lst[i], lst[j]))
+#     return pairs
+#
+# print(get_pairs([2, 4, 5, 5 ,7, 9], 7))
 
 
 # Optymalizacja
 
-def get_pairs2(lst, given_num):
-    pairs = []
-    numbers_set = set()
-    for elem in lst:
-        b = given_num - elem
-        if b in numbers_set:
-            pairs.append((elem, b))
-        else:
-            numbers_set.add(elem)
-    return pairs
+# def get_pairs2(lst, given_num):
+#     pairs = []
+#     numbers_set = set()
+#     for elem in lst:
+#         b = given_num - elem
+#         if b in numbers_set:
+#             pairs.append((elem, b))
+#         else:
+#             numbers_set.add(elem)
+#     return pairs
+#
+# print(get_pairs2([2, 4, 5, 5 ,7, 9], 7))
 
-print(get_pairs2([2, 4, 5, 5 ,7, 9], 7))
+
+# def daily_coding_16_02(lst, k):
+#     counter = 0
+#     for i in lst:
+#         for j in lst:
+#             if i + j == k:
+#                 return i, j, True
+#
+#
+# print(daily_coding_16_02([10, 15, 3, 7], 17))
+
+# def sumy_liczb(lst, given_num):
+#     pary = []
+#     numbers_set = set()
+#     for elem in lst:
+#         b = given_num - elem
+#         if b in numbers_set:
+#             pary.append((elem, b))
+#             return True
+#         else:
+#             numbers_set.add(elem)
+#     return pary
+#
+# print(sumy_liczb([10, 15, 3, 7], 17))
+
+
+var1 = "Abdefghijklmnoprstuwzyz"
+count = 0
+for i in var1:
+    count +=1
+
+print(count)
