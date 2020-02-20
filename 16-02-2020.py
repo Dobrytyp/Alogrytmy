@@ -323,15 +323,15 @@
 # print(get_pairs2([2, 4, 5, 5 ,7, 9], 7))
 
 
-# def daily_coding_16_02(lst, k):
-#     counter = 0
-#     for i in lst:
-#         for j in lst:
-#             if i + j == k:
-#                 return i, j, True
-#
-#
-# print(daily_coding_16_02([10, 15, 3, 7], 17))
+def daily_coding_16_02(lst, k):
+    counter = 0
+    for i in lst:
+        for j in lst:
+            if i + j == k:
+                return i, j, True
+
+
+print(daily_coding_16_02([10, 15, 3, 7], 17))
 
 # def sumy_liczb(lst, given_num):
 #     pary = []
@@ -348,9 +348,9 @@
 # print(sumy_liczb([10, 15, 3, 7], 17))
 
 
-var1 = "Abdefghijklmnoprstuwzyz"
-count = 0
-for i in var1:
-    count +=1
-
-print(count)
+# var1 = "Abdefghijklmnoprstuwzyz"
+# count = 0
+# for i in var1:
+#     count +=1
+#
+# print(count)

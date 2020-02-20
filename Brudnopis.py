@@ -123,18 +123,101 @@
 # Napisz funkcję, która sprawdzi, czy podana liczba jest doskonała (tj. jest
 # sumą swoich dzielników właściwych, np. 6 = 1 + 2 + 3).
 
-def doskonala(n):
-    dzielniki = []
-    for i in range(1, n):
-        if n % i == 0:
-            dzielniki.append(i)
-    if sum(dzielniki) == n:
-        return "jest doskonała"
-    else:
-        return "Nie jest"
+# def doskonala(n):
+#     dzielniki = []
+#     for i in range(1, n):
+#         if n % i == 0:
+#             dzielniki.append(i)
+#     if sum(dzielniki) == n:
+#         return "jest doskonała"
+#     else:
+#         return "Nie jest"
+#
+#
+# if __name__ == '__main__':
+#     print(doskonala(4))
+#     print(doskonala(6))
 
 
-if __name__ == '__main__':
-    print(doskonala(4))
-    print(doskonala(6))
+# def roman_numbers(n):
+#     lst_rom = []
+#     lst_rom2 = []
+#     for i in n:
+#         lst_rom.append(i)
+#     print(lst_rom)
+#     lst_rom2(lst_rom.insert(0, "o"))
+#     lst_rom = lst_rom.insert(0, "o")
+#     # for i in lst_rom:
+#     #     if i == 'C' and i(+1)
+#
+#
+#     return lst_rom, lst_rom2
+#
+# if __name__ == '__main__':
+#     print(roman_numbers("CMM"))
+
+
+# Bąbelki
+
+#
+#
+# def bubblesort(lst):
+#     n = len(lst) -1
+#     for i in range(n):
+#         for j in range(n-i):
+#             if lst[j] > lst[j+1]:
+#                 lst[j], lst[j+1] = lst[j+1], lst[j]
+#     return lst
+#
+# lista = [4, 54, 123, 1, 13, 8, 1]
+# print(bubblesort(lista))
+#
+# def bubblesort2(lst):
+#     n = len(lst) - 1
+#     for i in range(n):
+#         for j in range(n-i):
+#             if lst[j] > lst[j+1]:
+#                 lst[j], lst[j+1] = lst[j+1], lst[j]
+#     return lst
+
+#
+#
+# print(bubblesort2(lista))
+#
+#
+# def bubblesort3(lst):
+#     n = len(lst) -1
+#     for i in range(n):
+#         for j in range(n- i):
+#             if lst[j] > lst[j+1]:
+#                 lst[j], lst[+1] = lst[j+1], lst[j]
+#     return lst
+#
+# print(bubblesort3(lista))
+
+
+
+list1 =  [1, 2, 3, 4, 5]
+def daily(lst):
+    new_list = []
+    suma = 1
+    for i in lst:
+        suma *= i
+    for i in lst:
+        new_list.append(int(suma/i))
+    return new_list
+
+print(daily(list1))
+print(daily([3, 2, 1]))
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,18 +1,18 @@
 # Sortowanie bombpelkowe
 
 # lista = [5,8,1,4,9,4]
-#
-# def bubblesort(lst):
-#     n = len(lst) - 1
-#     for i in range(n):
-#         for j in range(n-i):
-#             if lst[j] > lst[j+1]:
-#                 lst[j], lst[j+1] = lst[j+1], lst[j]
-#     return lst
-#
-#
-# lista = [4, 54, 123, 1, 13, 8, 1]
-# print(bubblesort(lista))
+
+def bubblesort(lst):
+    n = len(lst) - 1
+    for i in range(n):
+        for j in range(n-i):
+            if lst[j] > lst[j+1]:
+                lst[j], lst[j+1] = lst[j+1], lst[j]
+    return lst
+
+
+lista = [4, 54, 123, 1, 13, 8, 1]
+print(bubblesort(lista))
 
 
 # Sortowanie przez wybór ==================================
@@ -288,34 +288,34 @@
 #
 
 
-from argparse import ArgumentParser
-
-
-def sum_section(lst, start, stop):
-    return sum(lst[start:stop+1])
-
-
-def cumulative_sum(lst):
-    sums = []
-    total = 0
-    for elem in lst:
-        total += elem
-        sums.append(total)
-    return sums
-
-
-if __name__ == "__main__":
-    parser = ArgumentParser()
-    parser.add_argument("--list", "-l", nargs="+", required=True)
-    args = parser.parse_args()
-
-    lst = list(map(int, args.list))
-    cum_sum = cumulative_sum(lst)
-    n = int(input("Podaj liczbę przedziałów\n"))
-    for _ in range(n):
-        start, stop = input("Podaj przedział\n").split()
-        start, stop = int(start), int(stop)
-        if start == 0:
-            print(cum_sum[stop])
-        else:
-            print(cum_sum[stop] - cum_sum[start-1])
+# from argparse import ArgumentParser
+#
+#
+# def sum_section(lst, start, stop):
+#     return sum(lst[start:stop+1])
+#
+#
+# def cumulative_sum(lst):
+#     sums = []
+#     total = 0
+#     for elem in lst:
+#         total += elem
+#         sums.append(total)
+#     return sums
+#
+#
+# if __name__ == "__main__":
+#     parser = ArgumentParser()
+#     parser.add_argument("--list", "-l", nargs="+", required=True)
+#     args = parser.parse_args()
+#
+#     lst = list(map(int, args.list))
+#     cum_sum = cumulative_sum(lst)
+#     n = int(input("Podaj liczbę przedziałów\n"))
+#     for _ in range(n):
+#         start, stop = input("Podaj przedział\n").split()
+#         start, stop = int(start), int(stop)
+#         if start == 0:
+#             print(cum_sum[stop])
+#         else:
+#             print(cum_sum[stop] - cum_sum[start-1])
