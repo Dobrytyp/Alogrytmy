@@ -47,7 +47,6 @@ def coding(lst):
         if i > 0:
             new_list.append(i)
     
-    range_list = []
     for i in range(1, max(new_list) + 2):
         if i not in new_list:
             return i
