@@ -41,17 +41,17 @@
 
 # DCP3 = "Given an array of integers, find the first missing positive integer in linear time and constant space. In other words, find the lowest positive integer that does not exist in the array. The array can contain duplicates and negative numbers as well."
 
-def coding(lst):
-    new_list = []
-    for i in lst:
-        if i > 0:
-            new_list.append(i)
-    
-    for i in range(1, max(new_list) + 2):
-        if i not in new_list:
-            return i
-    
-
-# print(DCP3)
-print(coding([3, 4, -1, 1]))
-print(coding([1, 2, 0]))
+# def coding(lst):
+#     new_list = []
+#     for i in lst:
+#         if i > 0:
+#             new_list.append(i)
+#
+#     for i in range(1, max(new_list) + 2):
+#         if i not in new_list:
+#             return i
+#
+#
+# # print(DCP3)
+# print(coding([3, 4, -1, 1]))
+# print(coding([1, 2, 0]))
